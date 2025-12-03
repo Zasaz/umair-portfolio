@@ -1,0 +1,140 @@
+/* 1. Define the Calluna Font */
+/* IMPORTANT: You must place the Calluna font files in a 'fonts' directory. */
+@font-face {
+    font-family: 'Calluna';
+    src: url('fonts/Calluna.woff2') format('woff2'),
+         url('fonts/Calluna.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Core Dark Mode Colors */
+:root {
+    --color-bg: #1a1a1a;
+    --color-text-primary: #f0f0f0;
+    --color-link: #f0f0f0;
+    --color-link-hover: #ffffff;
+    --max-content-width: 680px;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    font-family: 'Calluna', 'Times New Roman', Georgia, Times, serif;
+    line-height: 1.6;
+    margin: 0; /* Ensures no default browser margin is present */
+    padding: 0; /* Ensures no default browser padding is present */
+    font-size: 1.0625rem;
+    font-weight: 500;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+}
+
+/* Paragraphs and Sections */
+p {
+    margin-top: 0;
+    margin-bottom: 0.75rem; /* Reduced spacing between paragraphs */
+}
+
+.bio-section p:last-of-type {
+    margin-bottom: 1.5rem; /* Keeps a smaller space before the next section (essay list) */
+}
+
+/* Links (Crucial to the Aesthetic) */
+a {
+    color: var(--color-link);
+    text-decoration: underline;
+    text-decoration-color: var(--color-link);
+}
+
+a:hover {
+    color: var(--color-link-hover);
+    text-decoration-color: var(--color-link-hover);
+}
+
+/* Essay List (Unordered List) */
+.essay-list-section {
+    margin-bottom: 2.5rem;
+}
+
+.essay-list {
+    list-style-type: square;
+    padding-left: 1.25em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.essay-list li {
+    padding-bottom: 0.25rem;
+}
+
+.essay-list li a {
+    text-decoration: underline;
+    text-decoration-color: var(--color-text-primary);
+    color: var(--color-text-primary);
+}
+
+.essay-list li a:hover {
+    text-decoration-color: var(--color-link-hover);
+    color: var(--color-link-hover);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 2rem 1rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Footer Styling */
+.portfolio-footer {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 1rem 0.5rem 1rem; /* Changed to minimal vertical padding (0 top, 0.5rem bottom) */
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-text-primary);
+}
+
+.portfolio-footer p {
+    margin: 0;
+}
+
+.portfolio-footer a {
+    color: var(--color-link);
+    text-decoration: underline;
+    text-decoration-color: var(--color-link);
+}
+
+/* Centers block elements like p and ul within the section */
+.centered-text-section {
+    text-align: center;
+}
+
+/* Override for the main bio content to keep text left-aligned for readability */
+.bio-section p {
+    text-align: left;
+}
+
+/* Ensure the essay list bullets remain left-aligned */
+.essay-list-section {
+    text-align: left;
+}
