@@ -4,67 +4,599 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Static Portfolio</title>
+    <link rel="icon" type="image/png" href="cropped_profile.png">
+    <meta name="description"
+        content="Umair Ahmed | Senior Flutter Developer. Specializing in high-performance cross-platform apps and scalable architecture.">
+    <title>Umair Ahmed | Senior Flutter Developer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
-<body style="align-items: center;">
-    <div class="content-wrapper">
-        <header class="section-title">
-            <h1 style="font-size: 1.7rem;">Umair Ahmed</h1>
-        </header>
-
-        <section class="bio-section">
-            <p>
-                A Flutter developer with nearly four years of experience, I specialize in building performant mobile and
-                web applications with a professional focus on AI/ML integration for intelligent features. I am currently
-                pursuing a Master's degree in Computer Science at the Universität Wien.
-            </p>
-            <p>
-                My master's thesis involves developing an advanced AI-Powered C++ Code Analyzer. This complex,
-                full-stack application integrates the Gemini Large Language Model (LLM) for expert-level code analysis
-                and automated developer tasks. It uses a Retrieval-Augmented Generation (RAG) system with ChromaDB for
-                highly relevant context retrieval from the codebase.
-            </p>
-            <p>
-                The analyzer includes specialized "AI experts" to streamline the development lifecycle, such as tools
-                for calculating a Code Health Score, formal verification simulation, debugging (Heisenbug Killer), and
-                automating multi-step code changes via an Agentic Workflow. I am actively seeking collaborations on
-                innovative projects that involve next-generation user experiences powered by machine learning models.
-            </p>
-        </section>
-
-        <section class="essay-list-section">
-            <p>
-                Some of my featured projects include:
-            </p>
-            <ul class="essay-list">
-                <li>AI-Powered C++ Code Analyzer (Master's Thesis Project)</li>
-                <li>Real-Time Object Recognition Flutter Application</li>
-                <li>Serverless Backend for Multi-User Mobile Application</li>
-                <li>End-to-End Encrypted Messaging Prototype in Dart</li>
-            </ul>
-        </section>
-
-        <section class="links-section">
-            <section class="links-section">
-                <p>
-                    You can <a
-                        href="https://medium.com/@umairz007/how-to-fetch-data-using-api-calls-in-flutter-d3103b314a9f">read
-                        my writing</a> or view my <a href="https://github.com/zasaz">code</a>.<br><a
-                        href="mailto:umair391996@gmail.com">Reach out</a> if interested. <a
-                        href="https://www.linkedin.com/in/umair-ahmed-0b1b1b1b1/">LinkedIn</a> <br> <a
-                        href="Umair Ahmed ats-1.pdf">Resume
-                        English</a> <br> <a href="Umair Ahmed ugats-1.pdf">Resume German</a>
-                </p>
-            </section>
-        </section>
+<body>
+    <!-- BOOT SEQUENCE OVERLAY -->
+    <div id="boot-sequence" class="boot-overlay">
+        <div class="boot-log" id="boot-log"></div>
     </div>
 
-    <footer class="portfolio-footer">
-        <p style="font-size: 0.8rem; align-self: center;">Inspired from <a href="https://leerob.com/"
-                target="_blank">leerob</a> </p>
+    <div class="background-base"></div>
+    <div class="background-grid"></div>
+
+    <nav class="navbar hidden">
+        <div class="logo"></div>
+        <ul class="nav-links">
+            <li><a href="#hero">./ROOT</a></li>
+            <li><a href="#skills">./Skills</a></li>
+
+            <li><a href="#projects">./DEPLOYMENTS</a></li>
+            <li><a href="#thesis">./RESEARCH</a></li>
+            <li><a href="#contact">./SIGNAL</a></li>
+        </ul>
+    </nav>
+
+    <main class="hidden-content">
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="profile-core">
+                    <div class="core-ring ring-1"></div>
+                    <div class="core-ring ring-2"></div>
+                    <div class="core-ring ring-3"></div>
+                    <!-- Profile Image -->
+                    <div class="core-avatar">
+                        <img src="profile.png" alt="Umair Ahmed"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
+                </div>
+
+                <div class="hero-text">
+                    <h1 class="hero-name" id="hero-name" data-final="Umair Ahmed">01010101010</h1>
+                    <h2 class="hero-title" id="hero-title" data-final="Senior Flutter Developer">Loading
+                        System...</h2>
+                    <p class="hero-bio">
+                        <!-- <span class="mono-tag">[SYS_INFO]</span> Building scalable mobile applications.
+                        Specializing in <span class="accent-text">Clean Architecture</span>, <span
+                            class="accent-text">Advanced State Management</span>, and native platform integrations. -->
+                        I'm a Flutter developer with nearly four years of experience building performant mobile and web
+                        applications. My
+                        professional focus lies at the intersection of development and data, specifically leveraging
+                        AI/ML to create
+                        intelligent and engaging features.
+                    </p>
+                    <!-- <div class="hero-actions">
+                        <a href="#contact" class="cta-button">Initialize_Contact()</a>
+                        <a href="Umair Ahmed ats-1.pdf" class="secondary-button">View (Resume) en</a>
+                        <a href="Umair Ahmed ugats-1.pdf" class="secondary-button">View (Resume) de</a>
+                    </div> -->
+                    <div class="hero-actions">
+                        <a href="#contact" class="cta-button">Initialize_Contact()</a>
+                        <span style="white-space: nowrap;">
+                            <a href="Umair Ahmed ats-1.pdf" class="secondary-button" target="_blank"
+                                download>Download_CV(en)</a>
+                            <a href="Umair Ahmed ugats-1.pdf" class="secondary-button" target="_blank"
+                                download>Download_CV(de)</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE MODULES (SKILLS) -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="section-title"><span class="mono-prefix">>></span> Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="card-header">
+                            <span class="status-dot"></span>
+                            <h3>Core_Engine</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span class="skill-chip">Flutter 3.x</span></li>
+                            <li><span class="skill-chip">Dart</span></li>
+                            <li><span class="skill-chip">Firebase</span></li>
+                            <li><span class="skill-chip">REST/GraphQL</span></li>
+                            <li><span class="skill-chip">Method Channels</span></li>
+                            <li><span class="skill-chip">Android</span></li>
+                            <li><span class="skill-chip">iOS</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card-header">
+                            <span class="status-dot"></span>
+                            <h3>State_Management</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span class="skill-chip">BLoC / Cubit</span></li>
+                            <li><span class="skill-chip">Riverpod</span></li>
+                            <li><span class="skill-chip">Provider</span></li>
+                            <li><span class="skill-chip">GetX</span></li>
+                            <li><span class="skill-chip">Redux</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card-header">
+                            <span class="status-dot"></span>
+                            <h3>Dev_Ops & Tools</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span class="skill-chip">CI/CD (Codemagic)</span></li>
+                            <li><span class="skill-chip">Git / GitHub</span></li>
+                            <li><span class="skill-chip">Fastlane</span></li>
+                            <li><span class="skill-chip">Jira / Trello</span></li>
+                            <li><span class="skill-chip">Figma</span></li>
+                            <li><span class="skill-chip">Google Cloud</span></li>
+                            <li><span class="skill-chip">GitHub Actions</span></li>
+                            <li><span class="skill-chip">Docker</span></li>
+                            <li><span class="skill-chip">VS Code</span></li>
+                            <li><span class="skill-chip">Postman</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card-header">
+                            <span class="status-dot"></span>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span class="skill-chip">Dart</span></li>
+                            <li><span class="skill-chip">Java</span></li>
+                            <li><span class="skill-chip">JavaScript</span></li>
+                            <li><span class="skill-chip">Python</span></li>
+                            <li><span class="skill-chip">C++</span></li>
+                            <li><span class="skill-chip">C#</span></li>
+                            <li><span class="skill-chip">Java</span></li>
+                            <li><span class="skill-chip">Swift</span></li>
+                            <li><span class="skill-chip">SQL</span></li>
+                            <li><span class="skill-chip">Typescript (intermediate)</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card-header">
+                            <span class="status-dot"></span>
+                            <h3>Backend & Frameworks</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span class="skill-chip">Express.js</span></li>
+                            <li><span class="skill-chip">.NET Core</span></li>
+                            <li><span class="skill-chip">Node.js</span></li>
+                            <li><span class="skill-chip">React (intermediate)</span></li>
+                            <li><span class="skill-chip">MongoDB</span></li>
+                            <li><span class="skill-chip">PostgreSQL</span></li>
+                            <li><span class="skill-chip">REST API Development</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="project-header" style="padding-left: 4rem; height: 40px;">
+                <h2 class="section-title"><span class="mono-prefix">>></span> Active_Deployments</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Akamu -->
+                <article class="project-card nerd-card">
+                    <div class="card-decor-top"></div>
+                    <div class="project-header-compact">
+                        <span class="project-id-nerd">>> ID: 0x01 // AKAMU</span>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.akamu.ru&hl=en" class="nerd-link"
+                                target="_blank">Play Store</a>
+                        </div>
+                    </div>
+                    <div class="gallery-compact">
+                        <div class="gallery-scroll">
+                            <img src="projects/Akamu Meditation & Calming/1..webp" alt="Akamu 1" loading="lazy">
+                            <img src="projects/Akamu Meditation & Calming/2.png" alt="Akamu 2" loading="lazy">
+                            <img src="projects/Akamu Meditation & Calming/3.png" alt="Akamu 3" loading="lazy">
+                            <img src="projects/Akamu Meditation & Calming/4.png" alt="Akamu 4" loading="lazy">
+                            <img src="projects/Akamu Meditation & Calming/5.png" alt="Akamu 5" loading="lazy">
+                            <img src="projects/Akamu Meditation & Calming/6.png" alt="Akamu 6" loading="lazy">
+                            <img src="projects/Akamu Meditation & Calming/7.png" alt="Akamu 7" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="project-info-compact">
+                        <p class="project-desc-nerd">Meditation & calming app for focus and relaxation.</p>
+                        <div class="tech-stack-nerd">
+                            <i class="devicon-flutter-plain colored tech-icon" title="Flutter"></i>
+                            <i class="devicon-dart-plain colored tech-icon" title="Dart"></i>
+                            <!-- <span class="tech-item">AUDIO</span> -->
+                        </div>
+                    </div>
+                    <div class="card-decor-bottom"></div>
+                </article>
+
+                <!-- Buddy -->
+                <article class="project-card nerd-card">
+                    <div class="card-decor-top"></div>
+                    <div class="project-header-compact">
+                        <span class="project-id-nerd">>> ID: 0x02 // BUDDY</span>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=pk.salesassist.buddy2&hl=de&gl=US"
+                                class="nerd-link" target="_blank">Play Store</a>
+                        </div>
+                    </div>
+                    <div class="gallery-compact">
+                        <div class="gallery-scroll">
+                            <img src="projects/Buddy/1.png" alt="Buddy 1" loading="lazy">
+                            <img src="projects/Buddy/2.png" alt="Buddy 2" loading="lazy">
+                            <img src="projects/Buddy/3.png" alt="Buddy 3" loading="lazy">
+                            <img src="projects/Buddy/4.png" alt="Buddy 4" loading="lazy">
+                            <img src="projects/Buddy/5.png" alt="Buddy 5" loading="lazy">
+                            <img src="projects/Buddy/6.png" alt="Buddy 6" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="project-info-compact">
+                        <p class="project-desc-nerd">Buddy is a workflow management solution for seamless
+                            field team
+                            coordination, monitoring and efficiency</p>
+                        <div class="tech-stack-nerd">
+                            <i class="devicon-flutter-plain colored tech-icon" title="Flutter"></i>
+                            <i class="devicon-sqlite-plain colored tech-icon" title="SQLite"></i>
+                            <!-- <span class="tech-item">NOTIFS</span> -->
+                        </div>
+                    </div>
+                    <div class="card-decor-bottom"></div>
+                </article>
+
+                <!-- Edrive -->
+                <article class="project-card nerd-card">
+                    <div class="card-decor-top"></div>
+                    <div class="project-header-compact">
+                        <span class="project-id-nerd">>> ID: 0x03 // EDRIVE</span>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.upanels.edrivetracking&hl=de&gl=US&pli=1"
+                                class="nerd-link" target="_blank">Play Store</a>
+                        </div>
+                    </div>
+                    <div class="gallery-compact">
+                        <div class="gallery-scroll">
+                            <img src="projects/Edrive - Vehicle Tracking/1.jpeg" alt="Edrive 1" loading="lazy">
+                            <img src="projects/Edrive - Vehicle Tracking/2.jpeg" alt="Edrive 2" loading="lazy">
+                            <img src="projects/Edrive - Vehicle Tracking/3.jpeg" alt="Edrive 3" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="project-info-compact">
+                        <p class="project-desc-nerd">Real-time vehicle tracking & fleet mgmt.</p>
+                        <div class="tech-stack-nerd">
+                            <i class="devicon-flutter-plain colored tech-icon" title="Flutter"></i>
+                            <i class="devicon-google-plain colored tech-icon" title="Google Maps"></i>
+                            <!-- <span class="tech-item">SOCKETS</span> -->
+                        </div>
+                    </div>
+                    <div class="card-decor-bottom"></div>
+                </article>
+
+                <!-- Netgram -->
+                <article class="project-card nerd-card">
+                    <div class="card-decor-top"></div>
+                    <div class="project-header-compact">
+                        <span class="project-id-nerd">>> ID: 0x04 // NETGRAM</span>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.netagram.app"
+                                class="nerd-link">PlayStore</a>
+                        </div>
+                    </div>
+                    <div class="gallery-compact">
+                        <div class="gallery-scroll">
+                            <img src="projects/Netgram/1.png" alt="Netgram 1" loading="lazy">
+                            <img src="projects/Netgram/2.png" alt="Netgram 2" loading="lazy">
+                            <img src="projects/Netgram/3.png" alt="Netgram 3" loading="lazy">
+                            <img src="projects/Netgram/4.png" alt="Netgram 4" loading="lazy">
+                            <img src="projects/Netgram/5.png" alt="Netgram 5" loading="lazy">
+                            <img src="projects/Netgram/6.png" alt="Netgram 6" loading="lazy">
+                            <img src="projects/Netgram/7.png" alt="Netgram 7" loading="lazy">
+                            <img src="projects/Netgram/8.png" alt="Netgram 8" loading="lazy">
+                            <img src="projects/Netgram/9.png" alt="Netgram 9" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="project-info-compact">
+                        <p class="project-desc-nerd">Professional social networking platform.</p>
+                        <div class="tech-stack-nerd">
+                            <i class="devicon-flutter-plain colored tech-icon" title="Flutter"></i>
+                            <i class="devicon-firebase-plain colored tech-icon" title="Firebase"></i>
+                            <i class="devicon-googlecloud-plain colored tech-icon" title="Cloud Functions"></i>
+                        </div>
+                    </div>
+                    <div class="card-decor-bottom"></div>
+                </article>
+
+                <!-- SalesAssist -->
+                <article class="project-card nerd-card">
+                    <div class="card-decor-top"></div>
+                    <div class="project-header-compact">
+                        <span class="project-id-nerd">>> ID: 0x05 // SALES ASSIST</span>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=pk.salesassist.salesassist&hl=de&gl=US"
+                                class="nerd-link" target="_blank">PlayStore</a>
+                        </div>
+                    </div>
+                    <div class="gallery-compact">
+                        <div class="gallery-scroll">
+                            <img src="projects/SalesAssist/1.png" alt="SalesAssist 1" loading="lazy">
+                            <img src="projects/SalesAssist/2.png" alt="SalesAssist 2" loading="lazy">
+                            <img src="projects/SalesAssist/3.png" alt="SalesAssist 3" loading="lazy">
+                            <img src="projects/SalesAssist/4.png" alt="SalesAssist 4" loading="lazy">
+                            <img src="projects/SalesAssist/5.png" alt="SalesAssist 5" loading="lazy">
+                            <img src="projects/SalesAssist/6.png" alt="SalesAssist 6" loading="lazy">
+                            <img src="projects/SalesAssist/7.png" alt="SalesAssist 7" loading="lazy">
+                            <img src="projects/SalesAssist/8.png" alt="SalesAssist 8" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="project-info-compact">
+                        <p class="project-desc-nerd">SalesAssist, a leading sales management systems (DMS)
+                            provider.
+                        </p>
+                        <div class="tech-stack-nerd">
+                            <i class="devicon-flutter-plain colored tech-icon" title="Flutter"></i>
+                            <!-- <span class="tech-item">REST</span>
+                                <span class="tech-item">CHARTS</span> -->
+                        </div>
+                    </div>
+                    <div class="card-decor-bottom"></div>
+                </article>
+
+                <!-- Kiddy Cars -->
+                <article class="project-card nerd-card">
+                    <div class="card-decor-top"></div>
+                    <div class="project-header-compact">
+                        <span class="project-id-nerd">>> ID: 0x06 // KIDDY_CARS</span>
+                        <div class="project-links">
+                            <a href="https://apps.apple.com/us/app/kiddy-cars/id1598407846" class="nerd-link"
+                                target="_blank">Play Store</a>
+                        </div>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span class="placeholder-text">[NO_VISUAL_DATA]</span>
+                        <span class="placeholder-sub">// ARCHIVE_ENCRYPTED</span>
+                    </div>
+                    <div class="project-info-compact">
+                        <p class="project-desc-nerd">Fun & educational car game for kids.</p>
+                        <div class="tech-stack-nerd">
+                            <i class="devicon-flutter-plain colored tech-icon" title="Flutter"></i>
+                            <i class="devicon-dart-plain colored tech-icon" title="Dart"></i>
+                            <span class="tech-item">GAME_ENGINE</span>
+                        </div>
+                    </div>
+                    <div class="card-decor-bottom"></div>
+                </article>
+
+                <!-- Spoiled -->
+                <article class="project-card nerd-card">
+                    <div class="card-decor-top"></div>
+                    <div class="project-header-compact">
+                        <span class="project-id-nerd">>> ID: 0x07 // SPOILED</span>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.app.spoiled&hl=en"
+                                class="nerd-link" target="_blank">Play Store</a>
+                        </div>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span class="placeholder-text">[NO_VISUAL_DATA]</span>
+                        <span class="placeholder-sub">// ARCHIVE_ENCRYPTED</span>
+                    </div>
+                    <div class="project-info-compact">
+                        <p class="project-desc-nerd">Discover the ultimate beauty experience with our
+                            all-in-one.
+                        </p>
+                        <div class="tech-stack-nerd">
+                            <i class="devicon-flutter-plain colored tech-icon" title="Flutter"></i>
+                            <i class="devicon-firebase-plain colored tech-icon" title="Firebase"></i>
+                            <span class="tech-item">SOCIAL</span>
+                        </div>
+                    </div>
+                    <div class="card-decor-bottom"></div>
+                </article>
+
+                <!-- Chains -->
+                <article class="project-card nerd-card">
+                    <div class="card-decor-top"></div>
+                    <div class="project-header-compact">
+                        <span class="project-id-nerd">>> ID: 0x08 // CHAINS</span>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.chains.app&hl=en"
+                                class="nerd-link" target="_blank">Play Store</a>
+                        </div>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span class="placeholder-text">[NO_VISUAL_DATA]</span>
+                        <span class="placeholder-sub">// ARCHIVE_ENCRYPTED</span>
+                    </div>
+                    <div class="project-info-compact">
+                        <p class="project-desc-nerd">Whether you're a retailer, wholesaler, or small
+                            business owner,
+                            Chains gives you complete control over your supply chain</p>
+                        <div class="tech-stack-nerd">
+                            <i class="devicon-flutter-plain colored tech-icon" title="Flutter"></i>
+                            <span class="tech-item">REST_API</span>
+                            <span class="tech-item">PRODUCTIVITY</span>
+                        </div>
+                    </div>
+                    <div class="card-decor-bottom"></div>
+                </article>
+
+                <!-- LAMMA -->
+                <article class="project-card nerd-card">
+                    <div class="card-decor-top"></div>
+                    <div class="project-header-compact">
+                        <span class="project-id-nerd">>> ID: 0x09 // LAMMA</span>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.vga.lama&hl=en" class="nerd-link"
+                                target="_blank">Play Store</a>
+                        </div>
+                    </div>
+                    <div class="gallery-placeholder">
+                        <span class="placeholder-text">[NO_VISUAL_DATA]</span>
+                        <span class="placeholder-sub">// ARCHIVE_ENCRYPTED</span>
+                    </div>
+                    <div class="project-info-compact">
+                        <p class="project-desc-nerd">Lamma is the perfect app for organizing gatherings and
+                            booking
+                            services with ease!</p>
+                        <div class="tech-stack-nerd">
+                            <i class="devicon-flutter-plain colored tech-icon" title="Flutter"></i>
+                            <span class="tech-item">WEBRTC</span>
+                            <span class="tech-item">VOICE</span>
+                        </div>
+                    </div>
+                    <div class="card-decor-bottom"></div>
+                </article>
+
+                <!-- FADED CARDS FOR EFFECT -->
+                <article class="project-card nerd-card faded">
+                    <div class="card-decor-top"></div>
+                    <div class="project-header-compact">
+                        <span class="project-id-nerd">>> ID: 0x0A // ARCHIVED</span>
+                    </div>
+                    <div class="gallery-placeholder"></div>
+                    <div class="project-info-compact">
+                        <p class="project-desc-nerd">Legacy system archive.</p>
+                    </div>
+                </article>
+
+                <article class="project-card nerd-card faded">
+                    <div class="card-decor-top"></div>
+                    <div class="project-header-compact">
+                        <span class="project-id-nerd">>> ID: 0x0B // PRIVATE</span>
+                    </div>
+                    <div class="gallery-placeholder"></div>
+                    <div class="project-info-compact">
+                        <p class="project-desc-nerd">Confidential client project.</p>
+                    </div>
+                </article>
+
+                <article class="project-card nerd-card faded">
+                    <div class="card-decor-top"></div>
+                    <div class="project-header-compact">
+                        <span class="project-id-nerd">>> ID: 0x0C // INTERNAL</span>
+                    </div>
+                    <div class="gallery-placeholder"></div>
+                    <div class="project-info-compact">
+                        <p class="project-desc-nerd">Internal tooling and scripts.</p>
+                    </div>
+                </article>
+
+                <div class="more-projects-overlay">
+                    <h3 class="more-text">...and many more projects</h3>
+                    <p class="more-sub">// Check GitHub for open source contributions</p>
+                </div>
+            </div>
+        </section>
+        </div>
+        </section>
+
+        <!-- THESIS SECTION
+        <section id="thesis" class="thesis-section">
+            <div class="container">
+                <h2 class="section-title"><span class="mono-prefix">>></span> Research_Log</h2>
+                <div class="thesis-card">
+                    <div class="thesis-header">
+                        <span class="thesis-icon">🎓</span>
+                        <h3 class="thesis-title">Thesis: Advanced Mobile Architectures</h3>
+                    </div>
+                    <div class="thesis-content">
+                        <p>
+                            <strong>Abstract:</strong> This research explores the impact of declarative UI frameworks
+                            on mobile application performance and developer productivity. It analyzes the
+                            trade-offs between native performance and cross-platform flexibility, with a focus on
+                            Flutter's rendering engine.
+                        </p>
+                        <ul class="thesis-points">
+                            <li>Analyzed 50+ apps for performance metrics.</li>
+                            <li>Proposed a new state management pattern for large-scale apps.</li>
+                            <li>Published findings in [Journal Name/Conference].</li>
+                        </ul>
+                        <a href="#" class="secondary-button small">Read_Full_Paper()</a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+        <section id="thesis" class="thesis-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="mono-prefix">>></span> Research_Log
+                </h2>
+
+                <div class="thesis-card">
+                    <div class="thesis-header">
+                        <span class="thesis-icon">💡</span>
+                        <h3 class="thesis-title">Master's Thesis: AI-Powered C++ Code Analyzer</h3>
+                    </div>
+
+                    <div class="thesis-content">
+                        <p>
+                            My master's thesis involves the development of an advanced AI-Powered C++ Code Analyzer, a
+                            full-stack application leveraging the Gemini LLM and a Retrieval-Augmented Generation (RAG)
+                            system for precise context retrieval. This architecture underpins a suite of specialized "AI
+                            Experts" designed to streamline the software development lifecycle, including continuous
+                            quality scoring, runtime debugging, and multi-step refactoring via an Agentic Workflow.
+                        </p>
+
+                        <p>
+                            Core LLM features implemented in the thesis include:
+                        </p>
+
+                        <ul class="thesis-points">
+                            <li><span class="ai-prefix">»</span> Agentic Workflow: Automated multi-step refactoring and
+                                planning</li>
+                            <li><span class="ai-prefix">»</span> Code Health Scorer: Weighted metrics for objective code
+                                quality auditing</li>
+                            <li><span class="ai-prefix">»</span> Heisenbug Killer: Runtime debugging and trace log
+                                analysis</li>
+                            <li><span class="ai-prefix">»</span> Formal Verification: Simulated mathematical proof of
+                                function safety and correctness</li>
+                        </ul>
+
+                        <!-- <a href="#" class="secondary-button small">Read_Full_Thesis_Overview()</a> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SIGNAL (CONTACT) -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title"><span class="mono-prefix">>></span> Establish_Signal</h2>
+                <div class="contact-content">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="terminal-line">> Initiating handshake protocol...</p>
+                            <p class="terminal-line">> Target: <a href="mailto:umair391996@gmail.com"
+                                    class="email-link">umair391996@gmail.com</a></p>
+                            <p class="terminal-line">> Linkedin: <a href="https://www.linkedin.com/in/umair391996/"
+                                    target="_blank" class="email-link">Connect on Linkedin</a></p>
+                            <p class="terminal-line">> GitHub: <a href="https://github.com/Zasaz" target="_blank"
+                                    class="email-link">Zasaz</a></p>
+                            <p class="terminal-line">> Location: [REDACTED]</p>
+                            <p class="terminal-line">> Status: <span class="status-active">OPEN_TO_WORK</span></p>
+                            <p class="terminal-line input-line">_</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="mono-text">SYSTEM_ID: UA_2025 // ALL_RIGHTS_RESERVED</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
